@@ -1,10 +1,9 @@
 const jwt = require("jsonwebtoken");
-
 const User = require("../models/userSchema");
-
 const HttpError = require("../helpers/error");
 
-const { SECRET_KEY } = require("../config");
+require("dotenv").config();
+const { SECRET_KEY } = process.env;
 
 const authenticate = async (req, res, next) => {
   const { authorization = "" } = req.headers;

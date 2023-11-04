@@ -10,10 +10,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "axios": "^1.6.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "cross-env": "7.0.3",
+    "dotenv": "^16.3.1",
     "express": "^4.17.1",
     "gravatar": "^1.8.2",
     "jimp": "^0.22.10",
@@ -22,7 +24,10 @@
     "mongoose": "^7.6.3",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
-    "passport-jwt": "^4.0.1"
+    "nanoid": "^5.0.2",
+    "nodemailer": "^6.9.7",
+    "passport-jwt": "^4.0.1",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",

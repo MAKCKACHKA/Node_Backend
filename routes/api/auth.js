@@ -8,6 +8,7 @@ const {
   registerSchema,
   loginSchema,
   subscriptionSchema,
+  emailSchema,
 } = require("../../middleware/isValidAuth");
 const upload = require("../../middleware/upload");
 
@@ -34,5 +35,8 @@ router.patch(
   upload.single("avatar"),
   auth.updateAvatar
 );
+
+router.get("/verify/:verificationToken", auth.verifyEmail);
+router.post("/verify", validateAuth(emailSchema), auth.resendVerifyEmail);
 
 module.exports = router;
